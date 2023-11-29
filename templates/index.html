@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <b>Hola {{nombre}}, tienes {{edad}} años de edad y vives en {{pais}}, {{ciudad}}</b>
+    <h1>Hijos</h1>
+    {% for hijo in hijos%}
+    Los datos del hijo son:
+    <br>
+    {% for key, value in hijo.items %}
+        {{key}}: {{value}}
+
+        <br>
+    {% endfor %}
+    {% endfor %}
+
+    <hr>
+    {% if edad == 34 %}
+        Esta persona tiene 34 años
+
+    {% endif %}
+
+</body>
+</html>
